@@ -7,7 +7,7 @@ class Perros(models.Model):
     Nombre=models.CharField(max_length=40)
     Raza=models.CharField(max_length=40)
     Genero=models.CharField(max_length=40)
-    Edad=models.IntegerField()
+    Edad_Meses=models.IntegerField()
 
 
 class Gatos(models.Model):
@@ -15,7 +15,7 @@ class Gatos(models.Model):
     Nombre=models.CharField(max_length=40)
     Raza=models.CharField(max_length=40)
     Genero=models.CharField(max_length=40)
-    Edad=models.IntegerField()
+    Edad_Meses=models.IntegerField()
 
 
 class Mascota_Adoptada(models.Model):
