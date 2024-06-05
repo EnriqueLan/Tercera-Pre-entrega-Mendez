@@ -6,7 +6,7 @@
     <h2>Resultados de Búsqueda</h2>
     <ul>
         {% for mascota in resultados %}
-            <li>{{ mascota.Nombre }} - {{ mascota.Raza }}</li>
+            <li>{{ mascota.Nombre }} - {{ mascota.Raza }} - {{ mascota.Genero }} - {{ mascota.Edad_Meses }}</li>
         {% endfor %}
     </ul>
 {% endblock %}

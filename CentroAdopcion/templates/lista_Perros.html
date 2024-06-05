@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}Resultados de Búsqueda{% endblock %}
+
+{% block content %}
+    <h2>Resultados de Búsqueda</h2>
+    <ul>
+        {% for perro in lista_Perros %}
+        <li> {{perro.Nombre}} - {{perro.Raza}} </li>
+      {% endfor %}
+    </ul>
+{% endblock %}

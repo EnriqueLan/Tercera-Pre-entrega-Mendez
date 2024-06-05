@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}Adoptar Mascota{% endblock %}
+
+{% block content %}
+    <h2>Adoptar Mascota</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Adoptar</button>
+    </form>
+{% endblock %}
+

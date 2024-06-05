@@ -1,36 +1,80 @@
-from django.shortcuts import render, redirect
-from .models import Perros, Gatos, Mascota_Adoptada
-from .forms import PerroFormulario, GatoFormulario, MascotaAdoptadaFormulario, BuscarFormulario
+from django.shortcuts import render
+from .models import *
+from .forms import *
 
-def home(request):
-    return render(request, 'home.html')
+def home(req):
+    return render(req, 'home.html')
 
-def agregar_perro(request):
-    if request.method == "POST":
-        form = PerroFormulario(request.POST)
+def Dogs_List(req):
+
+  list = Dogs.objects.all()
+
+  return render(req, "lista_Perros.html", {"lista_Perros": list})
+
+def Cats_List(req):
+
+  list = Cats.objects.all()
+
+  return render(req, "lista_Gatos.html", {"lista_Gatos": list})
+
+def Add_New_Dog(req):
+    if req.method == "POST":
+        form = DogsForm(req.POST)
         if form.is_valid():
-            Perros.objects.create(
-                Nombre=form.cleaned_data['Nombre'],
-                Raza=form.cleaned_data['Raza'],
-                Genero=form.cleaned_data['Genero'],
-                Edad_Meses=form.cleaned_data['Edad_Meses']
+            Dogs.objects.create(
+                Name=form.cleaned_data['Name'],
+                Race=form.cleaned_data['Race'],
+                Gender=form.cleaned_data['Gender'],
+                Age=form.cleaned_data['Age']
             )
-            return redirect('home')
+            return render(req,'home.html')
     else:
-        form = PerroFormulario()
-    return render(request, 'agregar_perro.html', {'form': form})
+        form = DogsForm()
+    return render(req, 'agregar_perro.html', {'form': form})
 
-def buscar_mascota(request):
-    if request.method == "POST":
-        form = BuscarFormulario(request.POST)
+def Add_New_Cat(req):
+    if req.method == "POST":
+        form = CatsForm(req.POST)
         if form.is_valid():
-            especie = form.cleaned_data['especie']
-            nombre = form.cleaned_data['nombre']
-            if especie == 'Perro':
-                resultados = Perros.objects.filter(Nombre__icontains=nombre)
-            else:
-                resultados = Gatos.objects.filter(Nombre__icontains=nombre)
-            return render(request, 'resultados.html', {'resultados': resultados})
+            Cats.objects.create(
+                Name=form.cleaned_data['Name'],
+                Race=form.cleaned_data['Race'],
+                Gender=form.cleaned_data['Gender'],
+                Age=form.cleaned_data['Age']
+            )
+            return render(req,'home.html')
     else:
-        form = BuscarFormulario()
-    return render(request, 'buscar_mascota.html', {'form': form})
+        form = CatsForm()
+    return render(req, 'agregar_gato.html', {'form': form})
+
+def Adopt_Pet(req):
+    if req.method == "POST":
+        form = Pet_to_AdoptForm(req.POST)
+        if form.is_valid():
+            Adopted_Pet.objects.create(
+                User_Name=form.cleaned_data['UserName'],
+                User_Lastname=form.cleaned_data['UserLastname'],
+                User_Adress=form.cleaned_data['UserAdress'],
+                Celphone_Number=form.cleaned_data['CelphoneNumber'],
+                Pet_Name=form.cleaned_data['PetName'],
+                Pet_Race=form.cleaned_data['PetRace']
+            )
+            return render(req,'home.html')
+    else:
+        form = Pet_to_AdoptForm()
+    return render(req, 'adoptar_mascota.html', {'form': form})
+
+def Search_Pet(req):
+    if req.method == "POST":
+        form = SearchForm(req.POST)
+        if form.is_valid():
+            species= form.cleaned_data['species']
+            name = form.cleaned_data['name']
+            if species == 'Perro':
+                resultados = Dogs.objects.filter(name__icontains=name)
+            else:
+                resultados = Cats.objects.filter(name__icontains=name)
+            return render(req, 'resultados.html', {'resultados': resultados})
+    else:
+        form = SearchForm()
+    return render(req, 'buscar_mascota.html', {'form': form})

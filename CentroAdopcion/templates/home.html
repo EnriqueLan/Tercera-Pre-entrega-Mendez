@@ -5,5 +5,9 @@
 {% block content %}
     <h2>Bienvenido a la Página de Inicio</h2>
     <a href="{% url 'agregar_perro' %}">Agregar Perro</a>
+    <a href="{% url 'agregar_gato' %}">Agregar Gato</a>
+    <a href="{% url 'lista_perros' %}">Lista de Perros</a>
+    <a href="{% url 'lista_gatos' %}">Lista de Gatos</a>
     <a href="{% url 'buscar_mascota' %}">Buscar Mascota</a>
+    <a href="{% url 'adoptar_mascota' %}">Adoptar Mascota</a>
 {% endblock %}
