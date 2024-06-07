@@ -8,6 +8,6 @@ urlpatterns = [
     path('agregar_gato/', views.Add_New_Cat, name='agregar_gato'),
     path('buscar_mascota/', views.Search_Pet, name='buscar_mascota'),
     path('adoptar_mascota/', views.Adopt_Pet, name='adoptar_mascota'),
-    path('lista_Perros/', views.Dogs_List, name='lista_perros'),
-    path('lista_Gatos/', views.Cats_List, name='lista_gatos')
+    path('Lista_Perros/', views.Dogs_List, name='Lista_Perros'),
+    path('Lista_Gatos/', views.Cats_List, name='Lista_Gatos')
 ]

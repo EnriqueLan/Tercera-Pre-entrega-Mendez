@@ -1,13 +1,10 @@
 {% extends 'base.html' %}
 
-{% block title %}Inicio{% endblock %}
+{% block title %}Bienvenido!{% endblock %}
 
 {% block content %}
-    <h2>Bienvenido a la Página de Inicio</h2>
-    <a href="{% url 'agregar_perro' %}">Agregar Perro</a>
-    <a href="{% url 'agregar_gato' %}">Agregar Gato</a>
-    <a href="{% url 'lista_perros' %}">Lista de Perros</a>
-    <a href="{% url 'lista_gatos' %}">Lista de Gatos</a>
-    <a href="{% url 'buscar_mascota' %}">Buscar Mascota</a>
-    <a href="{% url 'adoptar_mascota' %}">Adoptar Mascota</a>
+<h1 class="mt-4">Bienvenido!</h1>
+<p>Gracias por preferir nuestro centro de adopcion para encontrar a tu proximo nuevo integrante de la familia.</p>
+<p>En esta plataforma podrás encontrar un listado de diferentes mascotas que tenemos disponible en nuestro refugio, te invitamos a explorar esta pagina
+y esperamos a que disfrutes del viaje.</p>
 {% endblock %}
