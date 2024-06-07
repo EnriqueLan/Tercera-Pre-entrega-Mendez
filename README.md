@@ -47,6 +47,7 @@ Esto te mostrará la mascota que estás buscando ademas de darte otros datos que
 3. Haz clic en "Adoptar".
 
 Esto guardará la información de la adopción en la base de datos y te redirigirá a la página de inicio.
+
 ¡¡¡Dato importante!!!
 Para la proxima actualizacion de esta aplicacion cada usuario va a poder ver que mascota adoptó y en las listas de perros o gatos de la pagina al costado del Nombre y de la Raza de la mascota habrá un mensaje que diga si ese animal está disponible o si está en proceso de adopcion.(Con proceso de adopcion me refiero a que la mascota podría a llegar a estar nuevamente disponible si el usuario que la adoptó primero decidió cancelar la adopcion pero para eso necesito crear los usuarios y un crud para todo este proceso)
 
