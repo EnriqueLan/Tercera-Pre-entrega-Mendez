@@ -68,12 +68,12 @@ def Search_Pet(req):
     if req.method == "POST":
         form = SearchForm(req.POST)
         if form.is_valid():
-            species= form.cleaned_data['species']
-            name = form.cleaned_data['name']
+            species = form.cleaned_data['Race']
+            Name = form.cleaned_data['Name']
             if species == 'Perro':
-                resultados = Dogs.objects.filter(name__icontains=name)
+                resultados = Dogs.objects.filter(Name__icontains=Name)
             else:
-                resultados = Cats.objects.filter(name__icontains=name)
+                resultados = Cats.objects.filter(Name__icontains=Name)
             return render(req, 'resultados.html', {'resultados': resultados})
     else:
         form = SearchForm()

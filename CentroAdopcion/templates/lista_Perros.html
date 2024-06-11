@@ -5,8 +5,8 @@
 {% block content %}
     <h2>Resultados de Búsqueda</h2>
     <ul>
-        {% for perro in lista_Perros %}
-        <li> {{perro.Nombre}} - {{perro.Raza}} </li>
+        {% for dog in lista_Perros %}
+        <li> {{dog.Name}} - {{dog.Race}} </li>
       {% endfor %}
     </ul>
 {% endblock %}

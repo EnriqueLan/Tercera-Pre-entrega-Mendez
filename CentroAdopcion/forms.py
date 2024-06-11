@@ -19,7 +19,7 @@ class SearchForm(forms.Form):
         ('Gato', 'Gato'),
     ]
     Race = forms.ChoiceField(choices=Breeds, label="Seleccione la Especie de la Mascota que quiere Buscar:")
-    Name = forms.CharField(max_length=40, label="Diganos como se llama la Mascota que está buscando:")
+    Name = forms.CharField(max_length=40, label="Díganos cómo se llama la Mascota que está buscando:")
 
 
 class Pet_to_AdoptForm(forms.Form):
