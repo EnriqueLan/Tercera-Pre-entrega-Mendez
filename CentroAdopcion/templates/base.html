@@ -19,18 +19,7 @@
         <script src="{% static 'CentroAdopcion/js/scripts.js' %}"></script>
         
         <div class="d-flex" id="wrapper">
-            <!-- Sidebar-->
-            <div class="border-end bg-white" id="sidebar-wrapper">
-                <div class="sidebar-heading border-bottom bg-light">Panel de Opciones</div>
-                <div class="list-group list-group-flush">
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="{% url 'agregar_perro' %}">Agregar Perros</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="{% url 'agregar_gato' %}">Agregar Gatos</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="{% url 'Lista_Perros' %}">Listar Perros</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="{% url 'Lista_Gatos' %}">Listar Gatos</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="{% url 'buscar_mascota' %}">Buscar Mascota</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="{% url 'adoptar_mascota' %}">Vamos a Adoptar!</a>
-                </div>
-            </div>
+            {% include 'Sidebar.html' %}
             <!-- Page content wrapper-->
             <div id="page-content-wrapper">
                 <!-- Top navigation-->

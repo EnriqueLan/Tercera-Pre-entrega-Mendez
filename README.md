@@ -26,11 +26,11 @@ Esto guardará la información del gato en la base de datos y te redirigirá a l
 
 ### 4. Listar Perros
 
-1. Ve a `/CentroAdopcion/lista_perros/` para ver una lista de todos los perros disponibles en la base de datos.
+1. Ve a `/CentroAdopcion/Lista_Perros/` o haz clic en "Listar Perros" para ver una lista de todos los perros disponibles en la base de datos.
 
 ### 5. Listar Gatos
 
-1. Ve a `/CentroAdopcion/lista_gatos/` para ver una lista de todos los gatos disponibles en la base de datos.
+1. Ve a `/CentroAdopcion/Lista_Gatos/` o haz clic en "Listar Gatos" para ver una lista de todos los gatos disponibles en la base de datos.
 
 ### 6. Buscar una Mascota
 
