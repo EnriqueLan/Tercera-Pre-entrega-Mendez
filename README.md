@@ -26,11 +26,11 @@ Esto guardará la información del gato en la base de datos y te redirigirá a l
 
 ### 4. Listar Perros
 
-1. Ve a `/CentroAdopcion/Lista_Perros/` o haz clic en "Listar Perros" para ver una lista de todos los perros disponibles en la base de datos.
+1. Haz clic en "Listar Perros" en la barra de navegación o Ve a `/CentroAdopcion/Lista_Perros/` para ver una lista de todos los perros disponibles en la base de datos.
 
 ### 5. Listar Gatos
 
-1. Ve a `/CentroAdopcion/Lista_Gatos/` o haz clic en "Listar Gatos" para ver una lista de todos los gatos disponibles en la base de datos.
+1. Haz clic en "Listar Gatos" en la barra de navegación o Ve a `/CentroAdopcion/Lista_Gatos/` para ver una lista de todos los gatos disponibles en la base de datos.
 
 ### 6. Buscar una Mascota
 
@@ -47,6 +47,7 @@ Esto te mostrará la mascota que estás buscando ademas de darte otros datos que
 3. Haz clic en "Adoptar".
 
 Esto guardará la información de la adopción en la base de datos y te redirigirá a la página de inicio.
+
 ¡¡¡Dato importante!!!
 Para la proxima actualizacion de esta aplicacion cada usuario va a poder ver que mascota adoptó y en las listas de perros o gatos de la pagina al costado del Nombre y de la Raza de la mascota habrá un mensaje que diga si ese animal está disponible o si está en proceso de adopcion.(Con proceso de adopcion me refiero a que la mascota podría a llegar a estar nuevamente disponible si el usuario que la adoptó primero decidió cancelar la adopcion pero para eso necesito crear los usuarios y un crud para todo este proceso)
 
